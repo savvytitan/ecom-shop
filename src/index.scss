@@ -1,0 +1,19 @@
+@import 'scss/main.scss';
+@import 'scss/_variables.scss';
+
+html {
+  font-family: CrimsonText-Regular sans-serif;
+  font-size: $rem-unit;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+div {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}

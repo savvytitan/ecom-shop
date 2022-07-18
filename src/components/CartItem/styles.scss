@@ -1,0 +1,95 @@
+@import 'scss/_mixins';
+@import 'scss/_variables';
+
+.cart-item {
+  display: grid;
+  border-bottom: 1px solid $black;
+  width: 100%;
+
+  @include for-phone-only {
+    grid-template-columns: 3fr 5fr 30px;
+    grid-column-gap: 10px;
+    padding: 20px 0;
+    height: 150px;
+  }
+  @include for-tablet-portrait-up {
+    grid-template-columns: 3fr 5fr 30px;
+    grid-column-gap: 10px;
+    padding: 20px 0;
+    height: 150px;
+  }
+  @include for-tablet-landscape-up {
+    grid-template-columns: 3fr 5fr 30px;
+    grid-column-gap: 10px;
+    padding: 20px 0;
+    height: 150px;
+  }
+  @include for-desktop-up {
+    grid-template-columns: 3fr 5fr 30px;
+    grid-column-gap: 20px;
+    padding: 40px 0;
+    height: 200px;
+  }
+}
+
+.cart-item__image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.cart-item__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart-item__info__item-name {
+  @include for-phone-only {
+    @include primary-title($black, 1.1rem, CrimsonText-Regular);
+  }
+  @include for-tablet-portrait-up {
+    @include primary-title($black, 1.1rem, CrimsonText-Regular);
+  }
+  @include for-tablet-landscape-up {
+    @include primary-title($black, 1.3rem, CrimsonText-Regular);
+  }
+  @include for-desktop-up {
+    @include primary-title($black, 1.5rem, CrimsonText-Regular);
+  }
+}
+
+.cart-item__info__brand {
+  @include for-phone-only {
+    @include primary-title($black, 1rem, CrimsonText-Regular);
+    margin-top: 4px;
+  }
+  @include for-tablet-portrait-up {
+    @include primary-title($black, 1rem, CrimsonText-Regular);
+    margin-top: 4px;
+  }
+  @include for-tablet-landscape-up {
+    @include primary-title($black, 1.2rem, CrimsonText-Regular);
+    margin-top: 4px;
+  }
+  @include for-desktop-up {
+    @include primary-title($black, 1.4rem, CrimsonText-Regular);
+    margin-top: 8px;
+  }
+}
+
+.cart-item__info__price {
+  @include for-phone-only {
+    @include primary-title($black, 1rem, Montserrat-Regular);
+  }
+  @include for-tablet-portrait-up {
+    @include primary-title($black, 1rem, Montserrat-Regular);
+  }
+  @include for-tablet-landscape-up {
+    @include primary-title($black, 1rem, Montserrat-Regular);
+  }
+  @include for-desktop-up {
+    @include primary-title($black, 1.5rem, Montserrat-Regular);
+  }
+}

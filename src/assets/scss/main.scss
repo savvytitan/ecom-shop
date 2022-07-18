@@ -1,0 +1,11 @@
+@import './mixins';
+
+@include font-face(
+  CrimsonText-Regular,
+  '../fonts/Crimson_Text/CrimsonText-Regular',
+  400,
+  normal,
+  ttf
+);
+
+@include font-face(Montserrat-Regular, '../fonts/Montserrat/Montserrat-Regular', 400, normal, ttf);

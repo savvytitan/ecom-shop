@@ -1,0 +1,56 @@
+@import 'scss/_mixins';
+@import 'scss/_variables';
+
+.navbar {
+  width: 100%;
+  background-color: $white;
+  border-bottom: 1px solid $black;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99999;
+
+  @include for-phone-only {
+    height: 60px;
+  }
+  @include for-tablet-portrait-up {
+    height: 60px;
+  }
+  @include for-tablet-landscape-up {
+    height: 60px;
+  }
+  @include for-desktop-up {
+    height: 80px;
+  }
+}
+
+.navbar__title {
+  @include for-phone-only {
+    @include primary-title($black, 1.5rem, Montserrat-Regular);
+    margin-left: 15px;
+  }
+  @include for-tablet-portrait-up {
+    @include primary-title($black, 1.5rem, Montserrat-Regular);
+    margin-left: 40px;
+  }
+  @include for-tablet-landscape-up {
+    @include primary-title($black, 1.5rem, Montserrat-Regular);
+    margin-left: 40px;
+  }
+  @include for-desktop-up {
+    @include primary-title($black, 2.5rem, Montserrat-Regular);
+    margin-left: 40px;
+  }
+}
+
+.navbar__cart {
+  @include for-phone-only {
+    margin-right: 15px;
+  }
+  @include for-tablet-portrait-up {
+    margin-right: 40px;
+  }
+}

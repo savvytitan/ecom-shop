@@ -1,0 +1,68 @@
+@import 'scss/_mixins';
+@import 'scss/_variables';
+
+.collection {
+  width: 100%;
+}
+
+.collection__error,
+.collection__not-found {
+  flex: 1;
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// placeholder
+%collection-message {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.collection__error__message {
+  @include primary-title(red, 1rem, CrimsonText-Regular, 1.5rem);
+  @extend %collection-message;
+}
+
+.collection__not-found__message {
+  @include primary-title($transparent-black, 1rem, CrimsonText-Regular, 1.5rem);
+  @extend %collection-message;
+}
+
+.collection__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 70px;
+  row-gap: 90px;
+  padding: 96px 48px;
+  justify-items: center;
+  align-items: center;
+
+  @include for-phone-only {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 30px;
+    padding: 30px 15px;
+  }
+  @include for-tablet-portrait-up {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 30px;
+    padding: 30px 15px;
+  }
+  @include for-tablet-landscape-up {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 30px;
+    padding: 30px 15px;
+  }
+  @include for-desktop-up {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 70px;
+    row-gap: 90px;
+    padding: 96px 48px;
+  }
+}

@@ -1,0 +1,47 @@
+@import 'scss/_variables';
+@import 'scss/_mixins';
+
+.default-button {
+  @include for-phone-only {
+    @include button(Montserrat-Regular, 1rem, $white, $black, 100px, 40px);
+  }
+  @include for-tablet-portrait-up {
+    @include button(Montserrat-Regular, 1rem, $white, $black, 120px, 40px);
+  }
+  @include for-tablet-landscape-up {
+    @include button(Montserrat-Regular, 1rem, $white, $black, 120px, 40px);
+  }
+  @include for-desktop-up {
+    @include button(Montserrat-Regular, 1.5rem, $white, $black, 150px, 55px);
+  }
+}
+
+.add-to-cart-button {
+  @include for-phone-only {
+    @include button(CrimsonText-Regular, 1rem, $white, transparent, auto, 20px);
+  }
+  @include for-tablet-portrait-up {
+    @include button(CrimsonText-Regular, 1.2rem, $white, transparent, auto, 20px);
+  }
+  @include for-tablet-landscape-up {
+    @include button(CrimsonText-Regular, 1.2rem, $white, transparent, auto, 30px);
+  }
+  @include for-desktop-up {
+    @include button(CrimsonText-Regular, 1.5rem, $white, transparent, auto, 55px);
+  }
+}
+
+.checkout-button {
+  @include for-phone-only {
+    @include button(Montserrat-Regular, 1rem, $white, $black, 100%, 55px);
+  }
+  @include for-tablet-portrait-up {
+    @include button(Montserrat-Regular, 1rem, $white, $black, 100%, 55px);
+  }
+  @include for-tablet-landscape-up {
+    @include button(Montserrat-Regular, 1rem, $white, $black, 100%, 55px);
+  }
+  @include for-desktop-up {
+    @include button(Montserrat-Regular, 1.5rem, $white, $black, 100%, 75px);
+  }
+}
